@@ -1,0 +1,57 @@
+# Core ML
+pandas==2.1.4
+numpy==1.26.3
+scikit-learn==1.4.0
+scipy==1.11.4
+
+# Deep Learning
+torch==2.1.2
+transformers==4.36.2
+datasets==2.16.1
+
+# ML Tools
+# Use MLflow 3.x to match local environment and include server deps
+mlflow==3.9.0
+lightgbm==4.2.0
+xgboost==2.0.3
+imbalanced-learn==0.12.0
+
+# NLP
+nltk==3.8.1
+spacy==3.7.2
+
+# Visualization
+matplotlib==3.8.2
+seaborn==0.13.1
+plotly==5.18.0
+wordcloud==1.9.3
+
+# Explainability
+shap==0.44.1
+lime==0.2.0.1
+
+# Django
+Django==4.2.9
+djangorestframework==3.14.0
+django-cors-headers==4.3.1
+
+# Utilities
+python-decouple==3.8
+gunicorn==21.2.0
+whitenoise==6.6.0
+psycopg2-binary==2.9.9
+
+# Jupyter
+jupyter==1.0.0
+ipykernel==6.28.0
+
+# MLflow server / runtime dependencies
+uvicorn==0.40.0
+fastapi==0.129.0
+waitress==3.0.2
+docker==7.1.0
+databricks-sdk==0.88.0
+opentelemetry-api==1.39.1
+opentelemetry-sdk==1.39.1
+skops==0.13.0
+prettytable==3.17.0

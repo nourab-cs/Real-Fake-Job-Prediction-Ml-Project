@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+.env
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# MLflow
+mlruns/
+
+# Data and Models (large files)
+data/processed/
+data/deliverables/
+models/saved_models/
+models/model_artifacts/
+
+# Node modules
+node_modules/
+frontend/node_modules/
+
+# Build files
+frontend/build/
+*.log
+npm-debug.log*
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Keep data raw folder
+!data/raw/
+!data/raw/**
+
+# Keep empty directories
+!.gitkeep

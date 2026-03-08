@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "preprocessing_date": "2026-02-27 13:02:33",
+    "original_dataset_shape": [
+      17880,
+      47
+    ],
+    "total_samples": 17880
+  },
+  "missing_values": {
+    "strategy": "Text: empty string, Categorical: Unknown, Boolean: 0",
+    "columns_handled": [
+      "title",
+      "location",
+      "department",
+      "salary_range",
+      "company_profile",
+      "description",
+      "requirements",
+      "benefits",
+      "employment_type",
+      "required_experience",
+      "required_education",
+      "industry",
+      "function",
+      "telecommuting",
+      "has_company_logo",
+      "has_questions"
+    ]
+  },
+  "text_preprocessing": {
+    "steps": [
+      "1. Convert to lowercase",
+      "2. Remove URLs",
+      "3. Remove email addresses",
+      "4. Remove HTML tags",
+      "5. Remove special characters",
+      "6. Tokenization",
+      "7. Remove stopwords",
+      "8. Lemmatization"
+    ],
+    "combined_text_fields": [
+      "title",
+      "company_profile",
+      "description",
+      "requirements",
+      "benefits"
+    ]
+  },
+  "feature_engineering": {
+    "text_features": [
+      "text_length",
+      "word_count",
+      "avg_word_length",
+      "title_length",
+      "description_length",
+      "requirements_length",
+      "benefits_length",
+      "company_profile_length"
+    ],
+    "pattern_features": [
+      "has_email",
+      "has_url",
+      "has_phone",
+      "uppercase_ratio",
+      "special_char_count",
+      "exclamation_count"
+    ],
+    "categorical_encoded": [
+      "employment_type",
+      "required_experience",
+      "required_education",
+      "industry",
+      "function"
+    ],
+    "total_engineered_features": 28
+  },
+  "data_split": {
+    "train_size": 14305,
+    "train_percentage": "80.0%",
+    "val_size": 1787,
+    "val_percentage": "10.0%",
+    "test_size": 1788,
+    "test_percentage": "10.0%",
+    "stratified": true
+  },
+  "class_imbalance_handling": {
+    "method": "SMOTE (Synthetic Minority Over-sampling Technique)",
+    "applied_to": "Training set only",
+    "before_smote": {
+      "real": 13613,
+      "fake": 692,
+      "ratio": "19.67:1"
+    },
+    "after_smote": {
+      "real": 13613,
+      "fake": 13613,
+      "ratio": "1.00:1"
+    }
+  },
+  "feature_scaling": {
+    "method": "StandardScaler (z-score normalization)",
+    "fitted_on": "Balanced training data",
+    "formula": "z = (x - mean) / std"
+  },
+  "tfidf_vectorization": {
+    "max_features": 5000,
+    "ngram_range": "(1, 2)",
+    "min_df": 5,
+    "max_df": 0.8,
+    "vocabulary_size": 5000
+  },
+  "output_files": {
+    "csv_files": [
+      "Data/processed/train_features.csv",
+      "Data/processed/val_features.csv",
+      "Data/processed/test_features.csv"
+    ],
+    "text_data": "Data/processed/text_data.json",
+    "tfidf_matrices": [
+      "Data/processed/tfidf_train.npz",
+      "Data/processed/tfidf_val.npz",
+      "Data/processed/tfidf_test.npz"
+    ],
+    "hybrid_features": [
+      "Data/processed/hybrid_train.npz",
+      "Data/processed/hybrid_val.npz",
+      "Data/processed/hybrid_test.npz"
+    ],
+    "artifacts": [
+      "models/model_artifacts/label_encoders.pkl",
+      "models/model_artifacts/scaler.pkl",
+      "models/model_artifacts/tfidf_vectorizer.pkl"
+    ]
+  },
+  "next_steps": [
+    "1. Train baseline models (Logistic Regression, Random Forest)",
+    "2. Train advanced models (LightGBM, XGBoost)",
+    "3. Fine-tune BERT/Transformer models",
+    "4. Track experiments with MLflow",
+    "5. Compare model performance",
+    "6. Select best model for deployment"
+  ]
+}

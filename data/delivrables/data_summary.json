@@ -1,0 +1,27 @@
+{
+  "Dataset Overview": {
+    "Total Rows": 17880,
+    "Total Features": 24,
+    "Real Jobs": 17014,
+    "Fake Jobs": 866,
+    "Imbalance Ratio": "19.65:1"
+  },
+  "Missing Values": {
+    "Columns with Missing": 12,
+    "Most Missing Column": "salary_range",
+    "Max Missing Percentage": "83.96%"
+  },
+  "Key Insights": {
+    "Fake jobs without logo": "67.3%",
+    "Real jobs without logo": "18.1%",
+    "Fake jobs without questions": "71.1%",
+    "Real jobs with salary": "15.5%",
+    "Fake jobs with salary": "25.8%"
+  },
+  "Text Features": {
+    "Avg Description Length (Real)": "1221 chars",
+    "Avg Description Length (Fake)": "1155 chars",
+    "Avg Requirements Length (Real)": "597 chars",
+    "Avg Requirements Length (Fake)": "446 chars"
+  }
+}

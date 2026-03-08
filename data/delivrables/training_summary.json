@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "training_date": "2026-02-27 13:13:54",
+    "experiment_name": "Fake-Job-Posting-Detection",
+    "mlflow_tracking_uri": "file:../mlruns"
+  },
+  "dataset_info": {
+    "train_size": 14305,
+    "val_size": 1787,
+    "test_size": 1788,
+    "train_positive_rate": "4.84%",
+    "val_positive_rate": "4.87%",
+    "test_positive_rate": "4.87%"
+  },
+  "models_trained": [
+    {
+      "name": "Logistic Regression",
+      "features": "TF-IDF (5000 features)",
+      "test_accuracy": 0.9714765100671141,
+      "test_f1": 0.7559808612440191,
+      "test_roc_auc": 0.989100393953523,
+      "model_path": "models/saved_models/logistic_regression_model.pkl"
+    },
+    {
+      "name": "Random Forest",
+      "features": "Hybrid (TF-IDF + Engineered)",
+      "test_accuracy": 0.9692393736017897,
+      "test_f1": 0.7027027027027027,
+      "test_roc_auc": 0.9822011392892619,
+      "model_path": "models/saved_models/random_forest_model.pkl"
+    },
+    {
+      "name": "LightGBM",
+      "features": "Hybrid (TF-IDF + Engineered)",
+      "test_accuracy": 0.9876957494407159,
+      "test_f1": 0.8607594936708861,
+      "test_roc_auc": 0.9962496705791726,
+      "model_path": "models/saved_models/lightgbm_model.pkl",
+      "is_best_model": true
+    },
+    {
+      "name": "XGBoost",
+      "features": "Hybrid (TF-IDF + Engineered)",
+      "test_accuracy": 0.0,
+      "test_f1": 0.0,
+      "test_roc_auc": 0.0,
+      "model_path": "models/saved_models/xgboost_model.pkl"
+    }
+  ],
+  "best_model": {
+    "name": "LightGBM",
+    "test_f1_score": 0.8607594936708861,
+    "deployment_ready": true,
+    "model_file": "models/saved_models/lightgbm_model.pkl"
+  },
+  "mlflow_runs": [
+    {
+      "run_name": "Logistic_Regression_TF-IDF"
+    },
+    {
+      "run_name": "Random_Forest_Hybrid"
+    },
+    {
+      "run_name": "LightGBM_Hybrid_Optimized"
+    },
+    {
+      "run_name": "XGBoost_Hybrid"
+    }
+  ],
+  "artifacts_generated": [
+    "Confusion matrices for all models",
+    "ROC curves for all models",
+    "Feature importance plots",
+    "Model comparison visualization"
+  ],
+  "next_steps": [
+    "1. Review MLflow UI for detailed metrics",
+    "2. Deploy best model (LightGBM) to Django API",
+    "3. Create prediction endpoint",
+    "4. Test API with sample job postings",
+    "5. Containerize with Docker"
+  ]
+}
