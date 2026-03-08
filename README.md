@@ -544,22 +544,7 @@ docker-compose exec frontend sh
 docker-compose exec mlflow bash
 ```
 
-### Production Considerations
 
-#### Security
-- Use environment variables for sensitive data
-- Remove build dependencies in production images
-- Implement proper authentication for API endpoints
-
-#### Performance
-- Enable nginx gzip compression (configured)
-- Implement static asset caching (configured)
-- Use multi-stage builds to reduce image size
-
-#### Monitoring
-- Health check endpoints available at `/health`
-- MLflow provides experiment monitoring
-- Container resource monitoring via Docker stats
 
 ### Troubleshooting Docker Issues
 
@@ -618,10 +603,6 @@ MIT License - Feel free to use this project for educational and commercial purpo
 
 ---
 
-## 👤 Author
-**Ahmed Touaibi**
-- GitHub: [TouaibiAhmed](https://github.com/TouaibiAhmed)
-- Repository: [Real-Fake-Job-Posting-Prediction-ML-Project](https://github.com/TouaibiAhmed/Real-Fake-Job-Posting-Prediction-ML-Project)
 
 ---
 
